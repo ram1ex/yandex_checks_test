@@ -6,7 +6,7 @@ from page_object_elements import MainOperations
 
 @pytest.fixture(scope="session")
 def browser_1():
-    service = Service('<path/to>/chromedriver_106')
+    service = Service('/path/to/webdriver')
     service.start()
     driver = webdriver.Remote(service.service_url)
     yield driver
@@ -14,7 +14,7 @@ def browser_1():
 
 @pytest.fixture(scope="session")
 def browser_2():
-    service = Service('<path/to>/chromedriver_106')
+    service = Service('/path/to/webdriver')
     service.start()
     driver = webdriver.Remote(service.service_url)
     yield driver
